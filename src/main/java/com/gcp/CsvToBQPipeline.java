@@ -117,12 +117,12 @@ public class CsvToBQPipeline {
 
     public static void main(String[] args) throws Throwable {
          // Currently hard-code the variables, this can be passed into as parameters
-         String sourceFilePath = "gs://bucket-name/filename.csv";
-         String tempLocationPath = "gs://bucket-name/tmp";
+         String sourceFilePath = "gs://bucket_name/sample.csv";
+         String tempLocationPath = "gs://bucket_name/tmp";
          boolean isStreaming = false;
          TableReference tableRef = new TableReference();
          // Replace this with your own GCP project id
-         tableRef.setProjectId("project-id");
+         tableRef.setProjectId("project_id");
          tableRef.setDatasetId("bigquery_dataset");
          tableRef.setTableId("table_name");
 
@@ -138,8 +138,9 @@ public class CsvToBQPipeline {
 
          // For Cloud execution, set the Cloud Platform project, staging location,
          // and specify DataflowRunner.
-         options.setProject("project-id");
-         options.setStagingLocation("gs://bucket-name/dataflow_staging");
+         options.setProject("project_id");
+         options.setStagingLocation("gs://bucket_name/dataflow_staging");
+         options.setJobName("csv-to-bigquery");
          options.setRunner(DataflowRunner.class);
          Pipeline p = Pipeline.create(options); 
         

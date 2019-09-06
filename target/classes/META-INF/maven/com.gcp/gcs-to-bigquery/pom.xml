@@ -20,7 +20,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.gcp</groupId>
-  <artifactId>gcs_to_bigquery</artifactId>
+  <artifactId>gcs-to-bigquery</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <properties>
