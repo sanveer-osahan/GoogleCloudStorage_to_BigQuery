@@ -1,4 +1,4 @@
-# GoogleCloudStorage_to_BigQuery #
+# Google Cloud Storage to BigQuery using Dataflow #
 
 ## Intro ##
 Cloud Dataflow is a managed service for executing a wide variety of data processing patterns. 
